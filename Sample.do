@@ -2,7 +2,7 @@ qui {
 *************************************************************************************
 * This is the only piece of code you should need to change
 *************************************************************************************
-local path = "/Users/gregoriocaetano/Dropbox/Work/Research/OngoingProjects/Eric/TimeUse/Code/"	// add your path here
+local path = "/Users/gregoriocaetano/Dropbox/My Mac (TCB699021)/Downloads/Code/"	// add your path here
 local outcome = "Y"						// outcome variable
 local treatment = "X"					// treatment variable
 local controls = "ChildMale ChildWhite ChildBlack ChildHispanic"			// list of controls
@@ -32,8 +32,8 @@ forvalues k=1(1)`maxK' {
 	cluster generate Z_`k' = groups(`k'), ties(more)
 }
 noisily display "clusters done"
-keep `outcome' `treatment' $controls Z_* 
-order `outcome' `treatment' $controls Z_* 
+keep `outcome' `treatment' `controls' Z_* 
+order `outcome' `treatment' `controls' Z_* 
 save "SampleDataWithClusters.dta", replace
 *************************************************************************************
 *************************************************************************************
