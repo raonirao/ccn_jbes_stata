@@ -2,7 +2,7 @@
 
 This repository contains the replication code in Stata for
 
-Caetano, C., Caetano, G., and Nielsen, E. (2022) 
+Caetano, C., Caetano, G., and Nielsen, E. (2023) 
 Correcting for Endogeneity in Models with Bunching
 R&R at Journal of Business & Economic Statistics
 
